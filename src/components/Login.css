@@ -1,0 +1,33 @@
+.login-container {
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+.login-form {
+  max-width: 400px;
+  margin: auto;
+  background-color: #ffffff; /* White background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  color: #343a40; /* Darker heading */
+}
+
+.login-form input {
+  margin-bottom: 15px;
+}
+
+.login-form button {
+  background-color: #007bff;
+  border: none;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+.alert {
+  margin-bottom: 20px;
+}
