@@ -48,3 +48,37 @@ button:hover {
 .error {
   color: red;
 } */
+
+/* src/App.css */
+
+/* src/App.css */
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 70px; /* Adjust based on sidebar width */
+  z-index: 1000;
+}
+
+.main-content {
+  padding: 20px;
+  width: 100%;
+  background-color: #f4f7fa;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.with-sidebar {
+  margin-left: 70px; /* Adjust based on sidebar width */
+}
+
+.main-content > * {
+  max-width: 1200px;
+  margin: 0 auto;
+}

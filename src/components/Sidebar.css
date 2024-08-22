@@ -1,0 +1,98 @@
+/* src/components/Sidebar.css */
+
+.sidebar {
+  width: 70px; /* Collapsed width by default */
+  background-color: #ffffff;
+  border-right: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: center; /* Center the toggle button when collapsed */
+  align-items: center;
+  padding: 10px;
+}
+
+.sidebar:not(.collapsed) .sidebar-header {
+  justify-content: flex-end; /* Align to the end when expanded */
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+  color: #0073e6;
+}
+
+.nav-link .nav-icon {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.sidebar.collapsed .nav-link {
+  justify-content: center;
+}
+
+.sidebar.collapsed .nav-icon {
+  margin-right: 0;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-button .nav-icon {
+  font-size: 1.2rem; /* Match icon size with other icons */
+  margin-right: 15px;
+}
+
+.logout-button:hover {
+  background-color: #f0f0f0;
+  color: #0073e6;
+}
+
+.sidebar.collapsed .logout-button {
+  justify-content: center;
+}
+
+.sidebar.collapsed .logout-button .nav-icon {
+  margin-right: 0;
+}
+
+.sidebar.collapsed .logout-button span {
+  display: none;
+}
