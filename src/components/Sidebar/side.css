@@ -1,0 +1,111 @@
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px; /* Slightly wider for a modern look */
+  background-color: #1f2937; /* Dark, professional background */
+  border-right: 1px solid #2d3748; /* Subtle divider */
+  z-index: 1000;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-top: 20px; /* Consistent padding */
+}
+
+.sidebar.collapsed {
+  width: 80px; /* Compact width when collapsed */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centered header */
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  color: #ffffff; /* White text for contrast */
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffffff; /* White color for icons */
+  transition: color 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #0ea5e9; /* Bright blue hover effect */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #a0aec0; /* Light gray text for links */
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  margin: 5px 10px; /* Reduced margin for tighter layout */
+}
+
+.nav-link:hover {
+  background-color: #0ea5e9; /* Cloudinary-inspired blue background */
+  color: #ffffff; /* White text on hover */
+  transform: translateX(5px); /* Subtle slide effect */
+}
+
+.nav-link .nav-icon {
+  font-size: 1.4rem;
+  margin-right: 15px;
+}
+
+.sidebar.collapsed .nav-link {
+  justify-content: center;
+  padding: 12px;
+}
+
+.sidebar.collapsed .nav-icon {
+  margin-right: 0;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 20px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #ef4444; /* Red for logout */
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.logout-button .nav-icon {
+  font-size: 1.4rem;
+  margin-right: 15px;
+}
+
+.sidebar.collapsed .logout-button {
+  justify-content: center;
+  padding: 12px;
+}
+
+.sidebar.collapsed .logout-button .nav-icon {
+  margin-right: 0;
+}

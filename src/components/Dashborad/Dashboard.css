@@ -1,15 +1,10 @@
-body {
-  font-family: "Inter", sans-serif;
-  background-color: #f4f7fa;
-  color: #333;
-}
-
 .dashboard-container {
   padding: 20px;
-  margin-left: 70px; /* Adjust based on sidebar width */
+  margin-left: 70px; /*Adjust based on sidebar width*/
   background-color: #f4f7fa;
   min-height: 100vh;
   transition: margin-left 0.3s ease;
+  margin-top: auto;
 }
 
 .dashboard-header {
@@ -20,6 +15,9 @@ body {
   font-size: 2rem;
   font-weight: 600;
   color: #333;
+  margin-top: 40%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .dashboard-content {

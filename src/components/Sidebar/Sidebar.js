@@ -78,6 +78,7 @@ import {
   FaCog,
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+// import "./side.css";
 import "./Sidebar.css";
 
 function Sidebar() {
