@@ -1,4 +1,4 @@
-src/components/Sidebar .css .sidebar {
+src/components/Sidebar.css .sidebar {
   width: 70px;
   background-color: #ffffff;
   border-right: 1px solid #e6e6e6;
@@ -47,9 +47,14 @@ src/components/Sidebar .css .sidebar {
   /* color: #0073e6; */
 }
 
+span {
+  color: #333;
+}
+
 .nav-link .nav-icon {
   font-size: 1.2rem;
   margin-right: 15px;
+  color: #333;
 }
 
 .sidebar.collapsed .nav-link {
@@ -79,7 +84,6 @@ src/components/Sidebar .css .sidebar {
 
 .logout-button:hover {
   background-color: #f0f0f0;
-  color: #0073e6;
 }
 
 .sidebar.collapsed .logout-button {
@@ -110,4 +114,31 @@ src/components/Sidebar .css .sidebar {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+}
+
+.sidebar.collapsed ~ .image-upload-container {
+  margin-left: 60px; /* Sidebar collapsed width */
+}
+
+.sidebar.expanded ~ .image-upload-container {
+  margin-left: 240px; /* Sidebar expanded width */
+}
+
+.image-upload-container {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.hightlight-container {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+.sidebar.collapsed ~ .hightlight-container {
+  margin-left: 60px; /* Sidebar collapsed width */
+}
+
+.sidebar.expanded ~ .hightlight-container {
+  margin-left: 240px; /* Sidebar expanded width */
 }

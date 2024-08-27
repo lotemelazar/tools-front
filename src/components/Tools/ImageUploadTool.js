@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BiBluetooth } from "react-icons/bi";
+import Sidebar from "../Sidebar/Sidebar";
 
 function ImageUploadTool() {
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -67,38 +68,42 @@ function ImageUploadTool() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center mt-5">
-      <div
-        className="card mt-0"
-        style={{
-          width: "75%",
-        }}>
-        <div className="card-body">
-          <div className="image-upload-tool">
-            <h2 className="mb-4">Image Upload Tool</h2>
-            <div className="mb-3">
-              <label>Select Files:</label>
-              <input
-                type="file"
-                className="form-control"
-                onChange={handleFileChange}
-                multiple
-              />
+    <div className="page-container">
+      {/* <Sidebar /> */}
+      {/* <div className=" d-flex justify-content-center align-items-center "> */}
+      <div className="image-upload-container d-flex justify-content-center align-items-center ">
+        <div
+          className="card mt-0"
+          style={{
+            width: "100%",
+          }}>
+          <div className="card-body">
+            <div className="image-upload-tool">
+              <h2 className="mb-4">Image Upload Tool</h2>
+              <div className="mb-3">
+                <label>Select Files:</label>
+                <input
+                  type="file"
+                  className="form-control"
+                  onChange={handleFileChange}
+                  multiple
+                />
+              </div>
+              <div className="mb-3">
+                <label>Select Folder:</label>
+                <input
+                  type="file"
+                  className="form-control"
+                  onChange={handleFolderChange}
+                  multiple
+                  webkitdirectory="true"
+                />
+              </div>
+              <button onClick={handleUpload} className="btn btn-success w-100">
+                Upload and Download
+              </button>
+              {uploadResult && <p className="mt-3">{uploadResult}</p>}
             </div>
-            <div className="mb-3">
-              <label>Select Folder:</label>
-              <input
-                type="file"
-                className="form-control"
-                onChange={handleFolderChange}
-                multiple
-                webkitdirectory="true"
-              />
-            </div>
-            <button onClick={handleUpload} className="btn btn-success w-100">
-              Upload and Download
-            </button>
-            {uploadResult && <p className="mt-3">{uploadResult}</p>}
           </div>
         </div>
       </div>

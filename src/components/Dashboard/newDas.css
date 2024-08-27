@@ -1,0 +1,28 @@
+/* General layout of the dashboard page */
+.dashboard-page {
+  display: flex;
+  height: 100vh; /* Make sure it occupies the full height of the viewport */
+}
+
+/* Sidebar styles (handled separately) */
+.sidebar {
+  transition: width 0.3s ease;
+}
+
+/* Dashboard container that adjusts based on sidebar state */
+.dashboard-container {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  /* overflow-x: hidden; */
+  /*overflow-x: hidden;  Prevent horizontal scrolling */
+}
+
+/* Adjust the margin of the container based on the sidebar's state */
+.sidebar.collapsed ~ .dashboard-container {
+  margin-left: 60px; /* Sidebar collapsed width */
+}
+
+.sidebar.expanded ~ .dashboard-container {
+  margin-left: 240px; /* Sidebar expanded width */
+}

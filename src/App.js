@@ -6,14 +6,14 @@ import {
   useLocation,
 } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Dashboard from "./components/Dashborad/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateRoute from "./routes/PrivateRoute";
 import Login from "./components/Login/Login";
-import Tools from "./components/Sidebar/Tools";
+import Tools from "./components/Pages/Tools";
 import Help from "./components/Sidebar/Help";
 import Settings from "./components/Sidebar/Settings";
-import ImageUploadTool from "./components/Tools/ImageUploadTool";
-import HighlightTool from "./components/Tools/HighlightedText";
+import HighlightToolPage from "./components/Pages/HighlightPage";
+import ImageUploadToolPage from "./components/Pages/ImageUploadPage";
 import "./styles/App.css";
 
 function AppLayout() {
@@ -22,8 +22,6 @@ function AppLayout() {
 
   return (
     <div className="app-container">
-      {!isLoginPage && <Sidebar />}{" "}
-      {/* Sidebar is not rendered on the login page */}
       <div className={`main-content ${!isLoginPage ? "with-sidebar" : ""}`}>
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -47,7 +45,8 @@ function AppLayout() {
             path="/image-tool"
             element={
               <PrivateRoute>
-                <ImageUploadTool />
+                {/* <ImageUploadTool /> */}
+                <ImageUploadToolPage />
               </PrivateRoute>
             }
           />
@@ -55,7 +54,8 @@ function AppLayout() {
             path="/highlights-glossary-tool"
             element={
               <PrivateRoute>
-                <HighlightTool />
+                {/* <HighlightTool /> */}
+                <HighlightToolPage />
               </PrivateRoute>
             }
           />

@@ -1,0 +1,54 @@
+/* Container styling for the cards */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: space-between;
+}
+
+/* Card styling */
+.dashboard-card {
+  flex: 1;
+  min-width: 300px; /* Minimum width for each card */
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+/* Ensure cards have consistent height */
+.dashboard-container {
+  align-items: stretch; /* Make all cards stretch to the same height */
+  display: flex;
+  flex-direction: column;
+
+  /* flex-wrap: wrap; */
+  gap: 20px; /* Space between cards */
+  justify-content: space-between;
+}
+
+.dashboard-grid {
+  align-items: stretch; /* Make all cards stretch to the same height */
+  display: flex;
+
+  gap: 20px; /* Space between cards */
+
+  background-color: aqua;
+}
+
+.tool-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Card hover effect */
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}

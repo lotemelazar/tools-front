@@ -1,0 +1,12 @@
+.sidebar.collapsed ~ .tools-layout-container {
+  margin-left: 60px; /* Sidebar collapsed width */
+}
+
+.sidebar.expanded ~ .tools-layout-container {
+  margin-left: 240px; /* Sidebar expanded width */
+}
+
+.tools-layout-container {
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}

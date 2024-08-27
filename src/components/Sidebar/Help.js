@@ -1,7 +1,13 @@
 import React from "react";
+import Sidebar from "./Sidebar";
 
 function Help() {
-  return <div>Help Page</div>;
+  return (
+    <div className="Help Page">
+      <Sidebar />
+      <div>Help Page</div>
+    </div>
+  );
 }
 
 export default Help;
