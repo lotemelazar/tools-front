@@ -5,7 +5,8 @@ import { faCopy, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function HighlightTool() {
   const [text, setText] = useState("");
-  const [customWords, setCustomWords] = useState([]);
+  // const [customWords, setCustomWords] = useState([]);
+  const customWords = [];
   const [highlightedText, setHighlightedText] = useState("");
 
   const handleSubmit = async () => {
