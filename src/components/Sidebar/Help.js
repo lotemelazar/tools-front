@@ -5,7 +5,7 @@ function Help() {
   return (
     <div className="Help Page">
       <Sidebar />
-      <div>Help Page</div>
+      <div>help page coming soon</div>
     </div>
   );
 }

@@ -41,7 +41,7 @@ function Sidebar() {
           <Link
             to="/dashboard"
             className="nav-link"
-            data-tooltip-id="my-tooltip"
+            // data-tooltip-id="my-tooltip"
             data-tooltip-content="Dashboard">
             <FaHome className="nav-icon" />
             {!isCollapsed && <span>Dashboard</span>}
@@ -51,7 +51,7 @@ function Sidebar() {
           <Link
             to="/tools"
             className="nav-link"
-            data-tooltip-id="my-tooltip"
+            // data-tooltip-id="my-tooltip"
             data-tooltip-content="Tools">
             <FaTools className="nav-icon" />
             {!isCollapsed && <span>Tools</span>}
@@ -61,7 +61,7 @@ function Sidebar() {
           <Link
             to="/help"
             className="nav-link"
-            data-tooltip-id="my-tooltip"
+            // data-tooltip-id="my-tooltip"
             data-tooltip-content="Help">
             <FaQuestionCircle className="nav-icon" />
             {!isCollapsed && <span>Help</span>}
@@ -71,7 +71,7 @@ function Sidebar() {
           <Link
             to="/settings"
             className="nav-link"
-            data-tooltip-id="my-tooltip"
+            // data-tooltip-id="my-tooltip"
             data-tooltip-content="Settings">
             <FaCog className="nav-icon" />
             {!isCollapsed && <span>Settings</span>}
@@ -86,7 +86,7 @@ function Sidebar() {
         <FaSignOutAlt className="nav-icon" />
         {!isCollapsed && <span>Logout</span>}
       </button>
-      {/* <Tooltip id="my-tooltip" place="right-end" /> */}
+      <Tooltip id="my-tooltip" place="right-end" />
     </aside>
   );
 }

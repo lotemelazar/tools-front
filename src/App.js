@@ -18,13 +18,16 @@ import "./styles/App.css";
 
 function AppLayout() {
   const location = useLocation();
-  const isLoginPage = location.pathname === "/login";
+  const isLoginPage =
+    location.pathname === "/login" || location.pathname === "/";
 
   return (
     <div className="app-container">
       <div className={`main-content ${!isLoginPage ? "with-sidebar" : ""}`}>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
+
           <Route
             path="/dashboard"
             element={
@@ -45,7 +48,6 @@ function AppLayout() {
             path="/image-tool"
             element={
               <PrivateRoute>
-                {/* <ImageUploadTool /> */}
                 <ImageUploadToolPage />
               </PrivateRoute>
             }
@@ -54,7 +56,6 @@ function AppLayout() {
             path="/highlights-glossary-tool"
             element={
               <PrivateRoute>
-                {/* <HighlightTool /> */}
                 <HighlightToolPage />
               </PrivateRoute>
             }

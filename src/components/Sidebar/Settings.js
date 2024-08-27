@@ -5,7 +5,7 @@ function Settings() {
   return (
     <div className="setting-Page">
       <Sidebar />
-      <div>Settings Page</div>
+      <div>settings page comming soon</div>
     </div>
   );
 }
