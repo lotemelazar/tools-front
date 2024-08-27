@@ -1,10 +1,8 @@
 import React from "react";
 // import "./Dashboard.css";
 import "./newDas.css";
-
 import ToolCard from "./ToolCard";
 import Sidebar from "../Sidebar/Sidebar";
-import { Link, useNavigate } from "react-router-dom";
 
 function Dashboard() {
   return (

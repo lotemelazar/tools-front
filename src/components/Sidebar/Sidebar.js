@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   FaChevronRight,
   FaChevronLeft,
@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 
 import { Link, useNavigate } from "react-router-dom";
-import { Tooltip, TooltipRefProps } from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 import "./Sidebar.css";
 
 function Sidebar() {

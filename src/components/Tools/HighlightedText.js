@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faTrash } from "@fortawesome/free-solid-svg-icons";
-import Sidebar from "../Sidebar/Sidebar";
 
 function HighlightTool() {
   const [text, setText] = useState("");
   const [customWords, setCustomWords] = useState([]);
   const [highlightedText, setHighlightedText] = useState("");
-  // process.env.REACT_APP_API_URL +
 
   const handleSubmit = async () => {
-    // const response = await fetch("http://localhost:5000/process-article", {
     const response = await fetch(
       process.env.REACT_APP_API_URL + "/process-article",
       {

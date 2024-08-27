@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { BiBluetooth } from "react-icons/bi";
-import Sidebar from "../Sidebar/Sidebar";
 
 function ImageUploadTool() {
   const [selectedFiles, setSelectedFiles] = useState([]);
