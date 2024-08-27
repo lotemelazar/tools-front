@@ -37,7 +37,7 @@ function ImageUploadTool() {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await fetch("http://localhost:5000/upload", {
+      const response = await fetch(process.env.REACT_APP_API_URL + "/upload", {
         method: "POST",
         headers: {
           "x-auth-token": token,

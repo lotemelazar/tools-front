@@ -8,13 +8,18 @@ function HighlightTool() {
   const [text, setText] = useState("");
   const [customWords, setCustomWords] = useState([]);
   const [highlightedText, setHighlightedText] = useState("");
+  // process.env.REACT_APP_API_URL +
 
   const handleSubmit = async () => {
-    const response = await fetch("http://localhost:5000/process-article", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text, customWords }),
-    });
+    // const response = await fetch("http://localhost:5000/process-article", {
+    const response = await fetch(
+      process.env.REACT_APP_API_URL + "/process-article",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text, customWords }),
+      }
+    );
     const data = await response.json();
     const formattedText = data.highlightedText.replace(/\n/g, "<br>");
     setHighlightedText(formattedText);
